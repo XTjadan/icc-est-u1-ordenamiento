@@ -3,7 +3,8 @@ public class App {
         
         int [] original = {5, 6, 4, 1, 2, 3};
         int [] b = original.clone();
-        int [] c = original;
+        int [] c = original.clone();
+        int [] a = original;
 
         // USAR EL METODO DEL ARCHIVO(clase) BUBBLE
         // INSTANCIA la clase Bubble
@@ -12,7 +13,14 @@ public class App {
         printArerglo(b);
         buuble.sort(b);
         printArerglo(b);
-    
+        
+        // Instanciar Seleccion
+        System.out.println("--- Selection sort ---");
+        System.out.println("Original");
+        Selection selection = new Selection();
+        printArerglo(c);
+        selection.sort(c);
+        printArerglo(c);
     }
 
     public static void printArerglo(int[] arr) {
