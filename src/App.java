@@ -4,6 +4,7 @@ public class App {
         int [] original = {5, 6, 4, 1, 2, 3};
         int [] b = original.clone();
         int [] c = original.clone();
+        int [] d = original.clone();
         int [] a = original;
         
 
@@ -24,6 +25,17 @@ public class App {
         selection.sort(c);
         System.out.println("Ordenado Asc");
         printArerglo(c);
+
+
+        // Instanciar Insertion
+        ///
+        System.out.println("--- Insertion Sort ---");
+        InsertionSort insertion = new InsertionSort();
+        System.out.println("Original");
+        printArerglo(d);
+        insertion.sort(d);
+        System.out.println("Ordenado Asc");
+        printArerglo(d);
     }
 
     public static void printArerglo(int[] arr) {
