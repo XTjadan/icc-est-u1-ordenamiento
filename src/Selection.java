@@ -5,32 +5,30 @@ public class Selection {
         int combinaciones = 0;
         for(int i = 0; i < arreglo.length;i ++) {
             int min = i;
-            System.out.print("Pasada = " + i); 
+            System.out.print("Pasada = " + i );
             System.out.print(" | ");
-            System.out.println("cambio= " + arreglo[i]  );
-            for(int j = i + 1; j < arreglo.length; j++)
+            System.out.println("cambio = " + arreglo[i]  );
+            
+            for(int j = i + 1; j < arreglo.length ; j++){
+                combinaciones++;
                 if(arreglo[j] < arreglo[min]){
-                    cambios++;
-                    
-                    min = j;
+                    min = j;    
 
+                
                 }
+
+            }
             if(min != i){
+                
                 int temp = arreglo[min];
                 arreglo[min] = arreglo[i];
                 arreglo[i] = temp;
-            
-
-            }
-
-            
-
-            
-
-
+                cambios++;
+                
+            }           
         }
-        System.out.println("Comparaciones = " + combinaciones);
         System.out.println("Cambios = " + cambios);
+        System.out.println("Combinaciones = " + combinaciones);
     }
     
 }

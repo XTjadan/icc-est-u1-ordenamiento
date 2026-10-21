@@ -15,11 +15,13 @@ public class App {
         printArerglo(b);
         
         // Instanciar Seleccion
+
         System.out.println("--- Selection sort ---");
         System.out.println("Original");
         Selection selection = new Selection();
         printArerglo(c);
         selection.sort(c);
+        System.out.println("Ordenado Asc");
         printArerglo(c);
     }
 

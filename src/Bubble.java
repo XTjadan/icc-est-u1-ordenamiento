@@ -4,7 +4,7 @@ public class Bubble {
         int cambios = 0;
         int comparaciones = 0;
         for (int i = 0; i < arreglo.length ; i++) {
-            System.out.println("Pasada" + i);
+            System.out.println("Pasada = " + i);
             boolean commbinaciones = false;
         // for j
             for(int j = 1 ; j < arreglo.length - i; j++) {
