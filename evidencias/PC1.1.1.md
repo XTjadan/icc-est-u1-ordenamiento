@@ -2,8 +2,8 @@
 
 
 Metodo Burbuja
-![alt text](assets/1.png)
+![alt text](capturas/1.png)
 
 
 Resultado 
-![alt text](assets/2.png)
+![alt text](capturas/2.png)
