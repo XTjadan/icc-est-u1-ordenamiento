@@ -5,7 +5,7 @@ public class InsertionSort {
         for(int i = 1; i < arreglo.length; i++) {
             int key = arreglo[i];
             int j = i - 1;
-            System.out.println("El aux =  " + key + " se inserto en pos " + (j + 1));
+            
             while(j >= 0 && arreglo[j] < key) {
                 
                 arreglo[j + 1] = arreglo[j];
@@ -13,6 +13,11 @@ public class InsertionSort {
                 j--;
             }
             arreglo[j + 1] = key;
+
+            if(j + 1 != i){
+                System.out.println("El aux =  " + key + " se inserto en pos " + (j + 1));
+
+            }
             
         }
     }

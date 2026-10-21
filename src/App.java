@@ -29,12 +29,12 @@ public class App {
 
         // Instanciar Insertion
         ///
-        System.out.println("--- Insertion Sort ---");
+        System.out.println("--- Selection Insertion  ---");
         InsertionSort insertion = new InsertionSort();
         System.out.println("Original");
         printArerglo(d);
         insertion.sort(d);
-        System.out.println("Ordenado Asc");
+        System.out.println("Ordenado Des");
         printArerglo(d);
     }
 
