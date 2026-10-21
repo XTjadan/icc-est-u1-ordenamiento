@@ -5,7 +5,7 @@ public class App {
         int [] b = original.clone();
         int [] c = original.clone();
         int [] a = original;
-        int
+        
 
         // USAR EL METODO DEL ARCHIVO(clase) BUBBLE
         // INSTANCIA la clase Bubble
