@@ -29,6 +29,7 @@ public class Selection {
         }
         System.out.println("Cambios = " + cambios);
         System.out.println("Combinaciones = " + combinaciones);
+        
     }
     
 }
