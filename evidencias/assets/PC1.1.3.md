@@ -1,6 +1,6 @@
 
 # CODIGO
-![alt text](image.png)
+![alt text](../capturas/6.png)
 
 ## Explicacion
 Partiendo del codigo que nos ordena acendentemente los numero, cambios el " arreglo [ j ] > key " por " arreglo [ j ] < key " para que nos ordene decendentemente.
