@@ -15,7 +15,7 @@ public class InsertionSort {
             arreglo[j + 1] = key;
 
             if(j + 1 != i){
-                System.out.println("El aux =  " + key + " se inserto en pos " + (j + 1));
+                System.out.println("El aux =  " + key + " se inserto en pos "  (j + 1));
 
             }
             
