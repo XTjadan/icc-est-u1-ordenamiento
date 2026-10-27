@@ -5,9 +5,13 @@ import models.Estudiante;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // runEjemplos
-        runEjemplosObjetos();
+       // runEjemplosObjetos();
         runComparators();
+       
+
+        
+        
+
 
     }
 
@@ -16,14 +20,9 @@ public class App {
         Arrays.sort(original);
         for(int i = 0; i < original.length; i ++){
             System.out.println(original[i]);
-            
-
         }
 
         Arrays.sort(original, Comparator.reverseOrder());
-
-
-
 
     }
  private static void runComparators() {
@@ -47,48 +46,10 @@ public class App {
 
         Bubble bubble = new Bubble();
         bubble.sortEstudiantes(estudiantes);
-
-        
-
-
-        
-
-    
-
-
-
-
-        
-
-
-
-
-
-
-        
-
-
-
-        
-            
-
-
-        
-        
-
-
-
-
-
-
-
     }
 
+
  public static void runEjemplosPrimitivos(){
-
-    
-
-
 
     int [] original = {5, 6, 4, 1, 2, 3};
         int [] b = original.clone();
