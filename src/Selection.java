@@ -10,7 +10,7 @@ public class Selection {
             for(int j = i + 1; j < arreglo.length ; j++){
                 combinaciones++;
                 if(arreglo[j] < arreglo[min]){
-                    min = j;    
+                    min = j; 
 
                 
                 }
