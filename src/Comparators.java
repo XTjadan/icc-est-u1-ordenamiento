@@ -150,12 +150,48 @@ public class Comparators {
      private void ejemplo8() {
         System.out.println("Ejemplo 8");
         List<Estudiante> lista = new ArrayList<>(estList);
-        Comparator<Estudiante> comparator = 
-        (e1 , e2) -> e1.getName().compareTo(e2.getName());
+        Comparator<Estudiante> comparator = (e1 , e2) -> {
+            int comp = Double.compare(e1.getNota(), e2.getNota());
+            if (comp != 0)
+                return comp;
+            return e2.getName().compareTo(e1.getName());
+        };
         lista.sort(comparator);
         print(lista);
 
      }
+
+private void ejemplo9() {
+    
+        System.out.println("Ejemplo 9");
+        List<Estudiante> lista = new ArrayList<>(estList);
+        Comparator<Estudiante> comparator = Comparator.comparingDouble(Estudiante::getNota)
+        .thenComparing(Estudiante::getName);
+        lista.sort(comparator);
+        print(lista);
+
+
+
+
+}
+
+
+/**
+     * Orden por nota DESCENDENTE Y NOMBRE ASCENDENTE
+     * Comparator -> por valor
+     * 1 comparator lambda
+     * 2 compator referencia
+     */
+
+private void ejemplo10() {
+System.out.println("Ejemplo 11");
+        List<Estudiante> lista = new ArrayList<>(estList);
+        Comparator<Estudiante> comparator = Comparator.<Estudiante>comparingDouble(e -> e.getNota())
+        .reversed()
+        .thenComparing(Estudiante::getName);
+        lista.sort(comparator);
+        print(lista);
+
 
 
 
@@ -163,4 +199,33 @@ public class Comparators {
 
 
 }
+
+/**
+     * Orden por nota DESCENDENTE Y NOMBRE ASCENDENTE
+     * Comparator -> por valor
+     * 1 comparator lambda
+     * 2 compator referencia
+     */
+
+private void ejemplo11() {
+System.out.println("Ejemplo 11");
+        List<Estudiante> lista = new ArrayList<>(estList);
+        Comparator<Estudiante> comparator = -> {
+        int comp = Comparator.<Estudiante>comparingDouble(e -> e.getNota())
+        .reversed()
+        .thenComparing(Estudiante::getName);
+        };
+        lista.sort(comparator);
+        print(lista);
+
+
+
+
+}
+
+
+
+}
+
+
 
