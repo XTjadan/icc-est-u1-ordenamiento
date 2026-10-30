@@ -22,14 +22,7 @@ public class Comparators {
         estList = new ArrayList<>(List.of(estArray));
 
         //Llamaada ejemplo
-        ejemplo1();
-        ejemplo2();
-        ejemplo3();
-        ejemplo4();
-        ejemplo5();
-        ejemplo6();
-        ejemplo7();
-        ejemplo8();
+       ejemplo11();
         
     }    
     
@@ -184,7 +177,7 @@ private void ejemplo9() {
      */
 
 private void ejemplo10() {
-System.out.println("Ejemplo 11");
+System.out.println("Ejemplo 10");
         List<Estudiante> lista = new ArrayList<>(estList);
         Comparator<Estudiante> comparator = Comparator.<Estudiante>comparingDouble(e -> e.getNota())
         .reversed()
@@ -210,11 +203,9 @@ System.out.println("Ejemplo 11");
 private void ejemplo11() {
 System.out.println("Ejemplo 11");
         List<Estudiante> lista = new ArrayList<>(estList);
-        Comparator<Estudiante> comparator = -> {
-        int comp = Comparator.<Estudiante>comparingDouble(e -> e.getNota())
-        .reversed()
-        .thenComparing(Estudiante::getName);
-        };
+        Comparator<Estudiante> comparator = Comparator.<Estudiante>comparingDouble
+        (e -> Math.min(10.0, e.getNota() < 7 ? e.getNota() + 2.0 : e.getNota()))
+        .thenComparing(Estudiante::getName, Comparator.reverseOrder());
         lista.sort(comparator);
         print(lista);
 
